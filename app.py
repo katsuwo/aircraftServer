@@ -46,9 +46,9 @@ def getJson(aircrafts):
     acs = {}
     for ac in aircrafts:
         acs[ac["icao"]] = JSONEncoder().encode(ac)
-    readTime = math.floor(Utility.getTimeStamp())
+    readTime = str(math.floor(Utility.getTimeStamp()))
     retDict = {'Items':acs,
-               'ReadTime:':readTime}
+               'ReadTime':readTime}
     return JSONEncoder().encode(retDict)
 
 def getTimeStamp():
