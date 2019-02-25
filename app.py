@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, abort, request
 from flask_pymongo import PyMongo
 import json
 import datetime
@@ -42,12 +42,39 @@ def getAircraftLastupdate(lastupdatetime = None):
     aircrafts = mongo.db.aircrafts.find(query)
     return getJson(aircrafts)
 
+
+@app.route('/calibration', methods=['POST'])
+def calibration():
+    print("Calibration")
+    data = request.data.decode('utf-8')
+    data = json.loads(data)
+    data["TimeStamp"] = Utility.getTimeStamp()
+
+    #remove old calibration-data
+    col = mongo.db.calibration
+    col.drop()
+
+    print(data)
+    col = mongo.db.calibration
+    col.insert(data)
+    retDict = {"result":"OK",
+               "statusCode":200}
+
+    return JSONEncoder().encode(retDict)
+
 def getJson(aircrafts):
     acs = {}
+    calib ={}
     for ac in aircrafts:
         acs[ac["icao"]] = JSONEncoder().encode(ac)
     readTime = str(math.floor(Utility.getTimeStamp()))
+    calibrationDataCollection = mongo.db.calibration.find()
+    if calibrationDataCollection.count() == 0:
+        calib = "None"
+    else:
+        calib = JSONEncoder().encode(calibrationDataCollection[0])
     retDict = {'Items':acs,
+               'Calibration': calib,
                'ReadTime':readTime}
     return JSONEncoder().encode(retDict)
 
