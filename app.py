@@ -72,7 +72,7 @@ def getJson(aircrafts):
     if calibrationDataCollection.count() == 0:
         calib = "None"
     else:
-        calib = JSONEncoder().encode(calibrationDataCollection[0])
+        calib = calibrationDataCollection[0]
     retDict = {'Items':acs,
                'Calibration': calib,
                'ReadTime':readTime}
