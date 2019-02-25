@@ -24,6 +24,13 @@ def getAllAircrafts():
     aircrafts = mongo.db.aircrafts.find()
     return getJson(aircrafts)
 
+@app.route('/clear', methods=['GET'])
+def clearDatabase():
+    mongo.db.aircrafts.drop()
+    aircrafts = mongo.db.aircrafts.find()
+    return getJson(aircrafts)
+
+
 @app.route('/count', methods=['GET'])
 def getAircraftsCount():
     aircrafts = mongo.db.aircrafts.find()

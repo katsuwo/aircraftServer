@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7d845a83-371b-4af1-bb34-a7e8eb5236c1" name="Default" comment="キャリブレーションに対応">
+    <list default="true" id="7d845a83-371b-4af1-bb34-a7e8eb5236c1" name="Default" comment="キャリブレーションのJson構造を変更">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
     </list>
@@ -12,7 +12,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/aircraftServer$aircraftServer.coverage" NAME="aircraftServer Coverage Results" MODIFIED="1551104593437" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/aircraftServer$aircraftServer.coverage" NAME="aircraftServer Coverage Results" MODIFIED="1551111619283" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/aircraftServer$Flask__app_py___1_.coverage" NAME="Flask (app.py) (1) Coverage Results" MODIFIED="1549988022193" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/aircraftServer$Flask__app_py_.coverage" NAME="Flask (app.py) Coverage Results" MODIFIED="1550038851616" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
@@ -21,8 +21,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="756">
-              <caret line="74" column="16" lean-forward="true" selection-start-line="74" selection-start-column="16" selection-end-line="74" selection-end-column="16" />
+            <state relative-caret-position="315">
+              <caret line="28" column="29" selection-start-line="28" selection-start-column="29" selection-end-line="28" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -88,8 +88,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1338" />
-    <option name="y" value="335" />
+    <option name="x" value="1843" />
+    <option name="y" value="436" />
     <option name="width" value="1879" />
     <option name="height" value="1553" />
   </component>
@@ -217,7 +217,9 @@
       <workItem from="1550953302090" duration="461000" />
       <workItem from="1551073250593" duration="315000" />
       <workItem from="1551095442947" duration="6133000" />
-      <workItem from="1551104486485" duration="144000" />
+      <workItem from="1551104486485" duration="232000" />
+      <workItem from="1551110939183" duration="97000" />
+      <workItem from="1551111188392" duration="424000" />
     </task>
     <task id="LOCAL-00001" summary="JsonのReadTimeをStringに変更">
       <created>1551073492452</created>
@@ -233,14 +235,21 @@
       <option name="project" value="LOCAL" />
       <updated>1551101576109</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="キャリブレーションのJson構造を変更">
+      <created>1551104683317</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1551104683317</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28320000" />
+    <option name="totallyTimeSpent" value="28929000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1338" y="335" width="1879" height="1553" extended-state="0" />
+    <frame x="1843" y="436" width="1879" height="1553" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20195971" />
@@ -275,14 +284,15 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="JsonのReadTimeをStringに変更" />
     <MESSAGE value="キャリブレーションに対応" />
-    <option name="LAST_COMMIT_MESSAGE" value="キャリブレーションに対応" />
+    <MESSAGE value="キャリブレーションのJson構造を変更" />
+    <option name="LAST_COMMIT_MESSAGE" value="キャリブレーションのJson構造を変更" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/app.py</url>
-          <line>70</line>
+          <line>77</line>
           <option name="timeStamp" value="8" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -296,8 +306,8 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="756">
-          <caret line="74" column="16" lean-forward="true" selection-start-line="74" selection-start-column="16" selection-end-line="74" selection-end-column="16" />
+        <state relative-caret-position="315">
+          <caret line="28" column="29" selection-start-line="28" selection-start-column="29" selection-end-line="28" selection-end-column="29" />
         </state>
       </provider>
     </entry>
