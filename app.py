@@ -45,7 +45,7 @@ def getAircraftsCount():
 def getAircraftLastupdate(lastupdatetime = None):
     if lastupdatetime is None:
         return "NONE"
-    query = {"update_time_stamp":{'$gte':int(lastupdatetime)}}
+    query = {"update_time_stamp":{'$gte':float(lastupdatetime)}}
     aircrafts = mongo.db.aircrafts.find(query)
     return getJson(aircrafts)
 
@@ -74,7 +74,7 @@ def getJson(aircrafts):
     calib ={}
     for ac in aircrafts:
         acs[ac["icao"]] = JSONEncoder().encode(ac)
-    readTime = str(math.floor(Utility.getTimeStamp()))
+    readTime = str(Utility.getTimeStamp())
     calibrationDataCollection = mongo.db.calibration.find()
     if calibrationDataCollection.count() == 0:
         calib = "None"
