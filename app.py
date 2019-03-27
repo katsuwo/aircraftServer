@@ -19,6 +19,11 @@ app = Flask(__name__)
 app.config['MONGO_URI'] = 'mongodb://localhost:27017/adsb'
 mongo = PyMongo(app)
 
+@app.route('/airports', methods=['GET'])
+def getAllAirports():
+    airports = mongo.db.airports.find()
+    return getJson(airports)
+
 @app.route('/all', methods=['GET'])
 def getAllAircrafts():
     aircrafts = mongo.db.aircrafts.find()
