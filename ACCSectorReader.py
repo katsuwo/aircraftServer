@@ -28,10 +28,8 @@ class ACCSectorReader:
                 lng = self.convert_degminsec_to_deg(lng_str[:3], lng_str[3:])
                 coordinates.append(lat)
                 coordinates.append(lng)
-            dict["name"] = sheetname
-            dict["coordinates"] = coordinates
+            dict[sheetname] = coordinates
             retlist.append(dict)
-
         return {"acc_sectors":retlist}
 
     def convert_degminsec_to_deg(self, deg_str, minsec_str):
