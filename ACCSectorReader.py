@@ -5,8 +5,10 @@ class ACCSectorReader:
         pass
     def getAllSectors(self):
         wb = xlrd.open_workbook("ACCSector.xlsx")
-        ret_dict = {}
+
+        retlist = []
         for sheetname in wb.sheet_names():
+            dict = {}
             sheet = wb.sheet_by_name(sheetname)
             all_points = ""
             for y in range(0, sheet.nrows):
@@ -24,9 +26,13 @@ class ACCSectorReader:
                 lng_str = tmpstr[1]
                 lat = self.convert_degminsec_to_deg(lat_str[:2], lat_str[2:])
                 lng = self.convert_degminsec_to_deg(lng_str[:3], lng_str[3:])
-                coordinates.append({"latitude":lat, "longitude":lng})
-            ret_dict[sheetname] = coordinates
-        return ret_dict
+                coordinates.append(lat)
+                coordinates.append(lng)
+            dict["name"] = sheetname
+            dict["coordinates"] = coordinates
+            retlist.append(dict)
+
+        return {"acc_sectors":retlist}
 
     def convert_degminsec_to_deg(self, deg_str, minsec_str):
         min = float(minsec_str[:2])
