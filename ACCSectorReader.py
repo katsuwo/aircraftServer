@@ -7,8 +7,8 @@ class ACCSectorReader:
         wb = xlrd.open_workbook("ACCSector.xlsx")
 
         retlist = []
+        dict = {}
         for sheetname in wb.sheet_names():
-            dict = {}
             sheet = wb.sheet_by_name(sheetname)
             all_points = ""
             for y in range(0, sheet.nrows):
@@ -29,8 +29,7 @@ class ACCSectorReader:
                 coordinates.append(lat)
                 coordinates.append(lng)
             dict[sheetname] = coordinates
-            retlist.append(dict)
-        return {"acc_sectors":retlist}
+        return {"acc_sectors":dict}
 
     def convert_degminsec_to_deg(self, deg_str, minsec_str):
         min = float(minsec_str[:2])
