@@ -3,7 +3,9 @@ from flask_pymongo import PyMongo
 import json
 import datetime
 import Utility
-import math
+import xlrd
+from ACCSectorReader import ACCSectorReader
+
 from bson import ObjectId
 #
 # Pymongo Version 3.4.0 required( newest version is invalid)
@@ -18,6 +20,14 @@ class JSONEncoder(json.JSONEncoder):
 app = Flask(__name__)
 app.config['MONGO_URI'] = 'mongodb://localhost:27017/adsb'
 mongo = PyMongo(app)
+
+ACCSectorReader().getAllSectors()
+
+
+@app.route('/accsectors', methods=['GET'])
+def getACCSectors():
+    sector = ACCSectorReader().getAllSectors()
+    return JSONEncoder().encode(sector)
 
 @app.route('/airports', methods=['GET'])
 def getAllAirports():
@@ -36,6 +46,11 @@ def clearDatabase():
     return getJson(aircrafts)
 
 
+@app.route('/remove', methods=['GET'])
+def removeAircrafts(lastupdatetime = None):
+    query = {"update_time_stamp":{'$lte':float(lastupdatetime)}}
+    return mongo.db.aircrafts.remove(query)
+
 @app.route('/count', methods=['GET'])
 def getAircraftsCount():
     aircrafts = mongo.db.aircrafts.find()
@@ -44,7 +59,6 @@ def getAircraftsCount():
     for ac in aircrafts:
         count += 1
     return str(count)
-
 
 @app.route('/lastupdate/<lastupdatetime>', methods=['GET'])
 def getAircraftLastupdate(lastupdatetime = None):
