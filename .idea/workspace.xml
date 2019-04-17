@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7d845a83-371b-4af1-bb34-a7e8eb5236c1" name="Default" comment="accsectorsのjson形式変更 part2">
+    <list default="true" id="7d845a83-371b-4af1-bb34-a7e8eb5236c1" name="Default" comment="accsectorsのjson形式変更 part3">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ACCSector.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/ACCSector.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ACCSectorReader.py" beforeDir="false" afterPath="$PROJECT_DIR$/ACCSectorReader.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,11 +22,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="759">
-              <caret line="103" column="35" lean-forward="true" selection-start-line="103" selection-start-column="35" selection-end-line="103" selection-end-column="35" />
-              <folding>
-                <element signature="e#0#39#0" expanded="true" />
-              </folding>
+            <state>
+              <caret column="27" selection-start-column="27" selection-end-column="27" />
             </state>
           </provider>
         </entry>
@@ -42,8 +40,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ACCSectorReader.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="31" column="34" selection-start-line="31" selection-start-column="34" selection-end-line="31" selection-end-column="34" />
+            <state relative-caret-position="560">
+              <caret line="32" column="6" selection-start-line="32" selection-start-column="6" selection-end-line="32" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -84,10 +82,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="676" />
-    <option name="y" value="315" />
-    <option name="width" value="2257" />
-    <option name="height" value="1240" />
+    <option name="x" value="1278" />
+    <option name="y" value="597" />
+    <option name="width" value="2002" />
+    <option name="height" value="1447" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -95,7 +93,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -107,6 +104,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -206,7 +204,8 @@
       <workItem from="1554641554954" duration="619000" />
       <workItem from="1554706068112" duration="2877000" />
       <workItem from="1554733390201" duration="4479000" />
-      <workItem from="1554742351588" duration="2000000" />
+      <workItem from="1554742351588" duration="3301000" />
+      <workItem from="1555486433980" duration="5959000" />
     </task>
     <task id="LOCAL-00001" summary="JsonのReadTimeをStringに変更">
       <created>1551073492452</created>
@@ -264,23 +263,30 @@
       <option name="project" value="LOCAL" />
       <updated>1554743122267</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="accsectorsのjson形式変更 part3">
+      <created>1554745503266</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1554745503266</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="45403000" />
+    <option name="totallyTimeSpent" value="52663000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="676" y="315" width="2257" height="1240" extended-state="0" />
+    <frame x="1278" y="597" width="2002" height="1447" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1948111" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22245108" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.47425476" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.22066198" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.39954337" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.22041553" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -312,7 +318,8 @@
     <MESSAGE value="urlに/accsectorsを追加" />
     <MESSAGE value="accsectorsのjson形式変更" />
     <MESSAGE value="accsectorsのjson形式変更 part2" />
-    <option name="LAST_COMMIT_MESSAGE" value="accsectorsのjson形式変更 part2" />
+    <MESSAGE value="accsectorsのjson形式変更 part3" />
+    <option name="LAST_COMMIT_MESSAGE" value="accsectorsのjson形式変更 part3" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -332,26 +339,21 @@
           <line>38</line>
           <option name="timeStamp" value="11" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/ACCSectorReader.py</url>
+          <line>6</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/aircraftServer$aircraftServer.coverage" NAME="aircraftServer Coverage Results" MODIFIED="1554745488816" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/aircraftServer$aircraftServer.coverage" NAME="aircraftServer Coverage Results" MODIFIED="1555491824390" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$USER_HOME$/Library/Caches/PyCharm2018.1/remote_sources/138626427/533225467/json/encoder.py" />
     <entry file="file://$USER_HOME$/Library/Caches/PyCharm2018.1/remote_sources/138626427/1110149535/flask/app.py" />
     <entry file="file://$USER_HOME$/Library/Caches/PyCharm2018.1/remote_sources/138626427/1110149535/flask/cli.py" />
-    <entry file="file://$PROJECT_DIR$/app.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="759">
-          <caret line="103" column="35" lean-forward="true" selection-start-line="103" selection-start-column="35" selection-end-line="103" selection-end-column="35" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/.PyCharm2018.3/system/remote_sources/138626427/1110149535/flask/cli.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17480">
@@ -366,10 +368,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="27" selection-start-column="27" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ACCSectorReader.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="31" column="34" selection-start-line="31" selection-start-column="34" selection-end-line="31" selection-end-column="34" />
+        <state relative-caret-position="560">
+          <caret line="32" column="6" selection-start-line="32" selection-start-column="6" selection-end-line="32" selection-end-column="6" />
         </state>
       </provider>
     </entry>

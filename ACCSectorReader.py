@@ -9,6 +9,7 @@ class ACCSectorReader:
         retlist = []
         dict = {}
         for sheetname in wb.sheet_names():
+            print(sheetname + " Processing.")
             sheet = wb.sheet_by_name(sheetname)
             all_points = ""
             for y in range(0, sheet.nrows):
@@ -20,6 +21,8 @@ class ACCSectorReader:
 
             coordinates = []
             for pt in points:
+                if pt == "":
+                    continue
                 pt2 = pt.replace("E", "").strip().replace("\t", "").replace(" ", "")
                 tmpstr = pt2.split("N")
                 lat_str = tmpstr[0]
@@ -28,7 +31,7 @@ class ACCSectorReader:
                 lng = self.convert_degminsec_to_deg(lng_str[:3], lng_str[3:])
                 coordinates.append(lat)
                 coordinates.append(lng)
-            dict[sheetname] = coordinates
+            dict[sheetname.replace(" ", "")] = coordinates
         return {"acc_sectors":dict}
 
     def convert_degminsec_to_deg(self, deg_str, minsec_str):
