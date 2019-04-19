@@ -45,7 +45,6 @@ def clearDatabase():
     aircrafts = mongo.db.aircrafts.find()
     return getJson(aircrafts)
 
-
 @app.route('/remove', methods=['GET'])
 def removeAircrafts(lastupdatetime = None):
     query = {"update_time_stamp":{'$lte':float(lastupdatetime)}}
@@ -67,6 +66,35 @@ def getAircraftLastupdate(lastupdatetime = None):
     query = {"update_time_stamp":{'$gte':float(lastupdatetime)}}
     aircrafts = mongo.db.aircrafts.find(query)
     return getJson(aircrafts)
+
+@app.route('/correction/<direction>/<val>', methods=['GET'])
+def setCorrection(direction = None, val = None):
+    print(direction)
+    if direction is None:
+        return "NONE"
+    if direction != "altitude" and direction != "forward":
+        return "usage: http://xx.xx.xx:yyyy/correction/altitude/zzz  or /correction/forward/zzz"
+
+    if val is not None:
+        corrections = mongo.db.correction.find()
+        correction = {}
+        if corrections.count() == 0:
+            correction["altitude"] = 0
+            correction["forward"] = 0
+            correction[direction] = val
+        else:
+            correction = corrections[0]
+            correction[direction] = val
+        mongo.db.correction.drop()
+        mongo.db.correction.insert(correction)
+
+        retDict = {"result": "OK",
+                   "statusCode": 200,
+                   "correction":correction}
+        return JSONEncoder().encode(retDict)
+    else:
+        return  ""
+#        query = {"update_time_stamp": {'$gte': float(lastupdatetime)}}
 
 
 @app.route('/calibration', methods=['POST'])
@@ -99,8 +127,17 @@ def getJson(aircrafts):
         calib = "None"
     else:
         calib = calibrationDataCollection[0]
+
+    corrections = mongo.db.correction.find()
+    if corrections.count() == 0:
+        correction["altitude"] = 0
+        correction["forward"] = 0
+    else:
+        correction = corrections[0]
+
     retDict = {'Items':acs,
                'Calibration': calib,
+               'Correction': correction,
                'ReadTime':readTime}
     return JSONEncoder().encode(retDict)
 
