@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7d845a83-371b-4af1-bb34-a7e8eb5236c1" name="Default" comment="ACCSector対応">
+    <list default="true" id="7d845a83-371b-4af1-bb34-a7e8eb5236c1" name="Default" comment="Correction対応">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
     </list>
@@ -21,11 +21,20 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="610">
-              <caret line="139" column="28" selection-start-line="139" selection-start-column="28" selection-end-line="139" selection-end-column="28" />
+            <state relative-caret-position="501">
+              <caret line="156" column="9" selection-start-line="156" selection-start-column="9" selection-end-line="156" selection-end-column="9" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/.PyCharm2018.3/system/remote_sources/138626427/533225467/socketserver.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-4953">
+              <caret line="466" selection-start-line="466" selection-end-line="466" />
             </state>
           </provider>
         </entry>
@@ -43,7 +52,7 @@
         <entry file="file://$PROJECT_DIR$/ACCSectorReader.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="840">
-              <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
+              <caret line="42" selection-start-line="42" selection-end-line="42" />
             </state>
           </provider>
         </entry>
@@ -85,8 +94,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="911" />
-    <option name="y" value="414" />
+    <option name="x" value="466" />
+    <option name="y" value="531" />
     <option name="width" value="2002" />
     <option name="height" value="1447" />
   </component>
@@ -96,6 +105,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -107,7 +117,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -209,7 +218,9 @@
       <workItem from="1554733390201" duration="4479000" />
       <workItem from="1554742351588" duration="3301000" />
       <workItem from="1555486433980" duration="6017000" />
-      <workItem from="1555677006703" duration="3846000" />
+      <workItem from="1555677006703" duration="3902000" />
+      <workItem from="1555826789130" duration="284000" />
+      <workItem from="1556376347864" duration="2255000" />
     </task>
     <task id="LOCAL-00001" summary="JsonのReadTimeをStringに変更">
       <created>1551073492452</created>
@@ -281,21 +292,29 @@
       <option name="project" value="LOCAL" />
       <updated>1555503137393</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Correction対応">
+      <created>1555681430264</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1555681430264</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="56567000" />
+    <option name="totallyTimeSpent" value="59162000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="911" y="414" width="2002" height="1447" extended-state="0" />
+    <frame x="466" y="531" width="2002" height="1447" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22451082" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22863027" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.39954337" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.39954337" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.21993911" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -330,7 +349,8 @@
     <MESSAGE value="accsectorsのjson形式変更 part2" />
     <MESSAGE value="accsectorsのjson形式変更 part3" />
     <MESSAGE value="ACCSector対応" />
-    <option name="LAST_COMMIT_MESSAGE" value="ACCSector対応" />
+    <MESSAGE value="Correction対応" />
+    <option name="LAST_COMMIT_MESSAGE" value="Correction対応" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -347,19 +367,19 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/app.py</url>
-          <line>86</line>
+          <line>102</line>
           <option name="timeStamp" value="13" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/app.py</url>
-          <line>80</line>
+          <line>96</line>
           <option name="timeStamp" value="14" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/aircraftServer$aircraftServer.coverage" NAME="aircraftServer Coverage Results" MODIFIED="1555680519779" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/aircraftServer$aircraftServer.coverage" NAME="aircraftServer Coverage Results" MODIFIED="1556378628612" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$USER_HOME$/Library/Caches/PyCharm2018.1/remote_sources/138626427/533225467/json/encoder.py" />
@@ -372,6 +392,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/ACCSectorReader.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="840">
+          <caret line="42" selection-start-line="42" selection-end-line="42" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Utility.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="40">
@@ -379,17 +406,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ACCSectorReader.py">
+    <entry file="file://$USER_HOME$/.PyCharm2018.3/system/remote_sources/138626427/533225467/socketserver.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="840">
-          <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
+        <state relative-caret-position="-4953">
+          <caret line="466" selection-start-line="466" selection-end-line="466" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="610">
-          <caret line="139" column="28" selection-start-line="139" selection-start-column="28" selection-end-line="139" selection-end-column="28" />
+        <state relative-caret-position="501">
+          <caret line="156" column="9" selection-start-line="156" selection-start-column="9" selection-end-line="156" selection-end-column="9" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>

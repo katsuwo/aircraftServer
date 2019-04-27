@@ -67,6 +67,22 @@ def getAircraftLastupdate(lastupdatetime = None):
     aircrafts = mongo.db.aircrafts.find(query)
     return getJson(aircrafts)
 
+@app.route('/interpolation/<val>', methods=['GET'])
+def setInterpolation(val="True"):
+    interpolation = {}
+    if val == "true" or val == "True":
+        interpolation = {"Value": True}
+    elif val == "False" or val == "false":
+        interpolation = {"Value": False}
+    else:
+        return "Value must be True(true) / False(false)"
+    mongo.db.interpolation.drop()
+    mongo.db.interpolation.insert(interpolation)
+    retDict = {"result": "OK",
+               "statusCode": 200,
+               "interpolation": interpolation}
+    return JSONEncoder().encode(retDict)
+
 @app.route('/correction/<direction>/<val>', methods=['GET'])
 def setCorrection(direction = None, val = None):
     print(direction)
@@ -135,10 +151,17 @@ def getJson(aircrafts):
     else:
         correction = corrections[0]
 
+    interpolations = mongo.db.interpolation.find()
+    if interpolations.count() == 0:
+        interpolation["value"] = False
+    else:
+        interpolation = interpolations[0]
+
     retDict = {'Items':acs,
                'Calibration': calib,
                'Correction': correction,
-               'ReadTime':readTime}
+               'Interpolation': interpolation,
+               'ReadTime': readTime}
     return JSONEncoder().encode(retDict)
 
 def getTimeStamp():
