@@ -83,6 +83,20 @@ def setInterpolation(val="True"):
                "interpolation": interpolation}
     return JSONEncoder().encode(retDict)
 
+@app.route('/trim/<val>', methods=['GET'])
+def setTrim(val = None):
+    print(val)
+    if val is None:
+        return "NONE"
+    trim = {"Value": val}
+    mongo.db.trim.drop()
+    mongo.db.trim.insert(trim)
+
+    retDict = {"result": "OK",
+               "statusCode": 200,
+               "trim": trim}
+    return JSONEncoder().encode(retDict)
+
 @app.route('/correction/<direction>/<val>', methods=['GET'])
 def setCorrection(direction = None, val = None):
     print(direction)
@@ -146,6 +160,7 @@ def getJson(aircrafts):
 
     corrections = mongo.db.correction.find()
     if corrections.count() == 0:
+        correction = {}
         correction["altitude"] = 0
         correction["forward"] = 0
     else:
@@ -153,14 +168,23 @@ def getJson(aircrafts):
 
     interpolations = mongo.db.interpolation.find()
     if interpolations.count() == 0:
-        interpolation["value"] = False
+        interpolation = {}
+        interpolation["Value"] = False
     else:
         interpolation = interpolations[0]
+
+    trims = mongo.db.trim.find()
+    if trims.count() == 0:
+        trim = {}
+        trim["Value"] = 0
+    else:
+        trim = trims[0]
 
     retDict = {'Items':acs,
                'Calibration': calib,
                'Correction': correction,
                'Interpolation': interpolation,
+               'Trim': trim,
                'ReadTime': readTime}
     return JSONEncoder().encode(retDict)
 
