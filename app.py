@@ -83,18 +83,32 @@ def setInterpolation(val="True"):
                "interpolation": interpolation}
     return JSONEncoder().encode(retDict)
 
-@app.route('/trim/<val>', methods=['GET'])
-def setTrim(val = None):
+@app.route('/htrim/<val>', methods=['GET'])
+def setHTrim(val = None):
     print(val)
     if val is None:
         return "NONE"
-    trim = {"Value": val}
-    mongo.db.trim.drop()
-    mongo.db.trim.insert(trim)
+    htrim = {"Value": val}
+    mongo.db.htrim.drop()
+    mongo.db.htrim.insert(htrim)
 
     retDict = {"result": "OK",
                "statusCode": 200,
-               "trim": trim}
+               "htrim": htrim}
+    return JSONEncoder().encode(retDict)
+
+@app.route('/vtrim/<val>', methods=['GET'])
+def setVTrim(val = None):
+    print(val)
+    if val is None:
+        return "NONE"
+    vtrim = {"Value": val}
+    mongo.db.vtrim.drop()
+    mongo.db.vtrim.insert(vtrim)
+
+    retDict = {"result": "OK",
+               "statusCode": 200,
+               "vtrim": vtrim}
     return JSONEncoder().encode(retDict)
 
 @app.route('/correction/<direction>/<val>', methods=['GET'])
@@ -173,18 +187,24 @@ def getJson(aircrafts):
     else:
         interpolation = interpolations[0]
 
-    trims = mongo.db.trim.find()
-    if trims.count() == 0:
-        trim = {}
-        trim["Value"] = 0
+    htrims = mongo.db.htrim.find()
+    if htrims.count() == 0:
+        htrim = 0
     else:
-        trim = trims[0]
+        htrim = htrims[0]
+
+    vtrims = mongo.db.vtrim.find()
+    if vtrims.count() == 0:
+        vtrim = 0
+    else:
+        vtrim = vtrims[0]
 
     retDict = {'Items':acs,
                'Calibration': calib,
                'Correction': correction,
                'Interpolation': interpolation,
-               'Trim': trim,
+               'H_Trim': htrim,
+               'V_Trim': vtrim,
                'ReadTime': readTime}
     return JSONEncoder().encode(retDict)
 

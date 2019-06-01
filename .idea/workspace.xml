@@ -21,8 +21,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="287">
-              <caret line="179" column="9" lean-forward="true" selection-start-line="179" selection-start-column="9" selection-end-line="179" selection-end-column="9" />
+            <state relative-caret-position="326">
+              <caret line="88" column="19" lean-forward="true" selection-start-line="88" selection-start-column="19" selection-end-line="88" selection-end-column="19" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -33,7 +33,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$USER_HOME$/.PyCharm2018.3/system/remote_sources/138626427/1110149535/flask/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3063">
+            <state relative-caret-position="35380">
               <caret line="1798" selection-start-line="1798" selection-end-line="1798" />
             </state>
           </provider>
@@ -103,10 +103,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1534" />
-    <option name="y" value="431" />
-    <option name="width" value="2002" />
-    <option name="height" value="1447" />
+    <option name="x" value="817" />
+    <option name="y" value="192" />
+    <option name="width" value="1497" />
+    <option name="height" value="1924" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -233,6 +233,9 @@
       <workItem from="1556964802350" duration="1458000" />
       <workItem from="1556970444098" duration="841000" />
       <workItem from="1556972615095" duration="2790000" />
+      <workItem from="1557030114119" duration="1668000" />
+      <workItem from="1557074523195" duration="37000" />
+      <workItem from="1559397058837" duration="1697000" />
     </task>
     <task id="LOCAL-00001" summary="JsonのReadTimeをStringに変更">
       <created>1551073492452</created>
@@ -322,17 +325,18 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="64339000" />
+    <option name="totallyTimeSpent" value="67741000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1534" y="431" width="2002" height="1447" extended-state="0" />
+    <frame x="817" y="192" width="1497" height="1924" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23635428" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.32985386" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.39954337" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.292574" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.21993911" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -341,7 +345,7 @@
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.32972583" />
-      <window_info anchor="bottom" id="File Transfer" order="11" weight="0.3348554" />
+      <window_info anchor="bottom" id="File Transfer" order="11" weight="0.33445004" />
       <window_info anchor="bottom" id="Terminal" order="12" weight="0.32972583" />
       <window_info anchor="bottom" id="Python Console" order="13" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -386,12 +390,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/app.py</url>
-          <line>116</line>
+          <line>130</line>
           <option name="timeStamp" value="13" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/app.py</url>
-          <line>110</line>
+          <line>124</line>
           <option name="timeStamp" value="14" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -401,24 +405,41 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/app.py</url>
-          <line>169</line>
+          <line>183</line>
           <option name="timeStamp" value="19" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/app.py</url>
-          <line>176</line>
+          <line>190</line>
           <option name="timeStamp" value="20" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/aircraftServer$aircraftServer.coverage" NAME="aircraftServer Coverage Results" MODIFIED="1556975254460" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/aircraftServer$aircraftServer.coverage" NAME="aircraftServer Coverage Results" MODIFIED="1559398169925" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$USER_HOME$/Library/Caches/PyCharm2018.1/remote_sources/138626427/533225467/json/encoder.py" />
     <entry file="file://$USER_HOME$/Library/Caches/PyCharm2018.1/remote_sources/138626427/1110149535/flask/app.py" />
     <entry file="file://$USER_HOME$/Library/Caches/PyCharm2018.1/remote_sources/138626427/1110149535/flask/cli.py" />
+    <entry file="file://$PROJECT_DIR$/app.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="326">
+          <caret line="88" column="19" lean-forward="true" selection-start-line="88" selection-start-column="19" selection-end-line="88" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm2018.3/system/remote_sources/138626427/1110149535/flask/app.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="35380">
+          <caret line="1798" selection-start-line="1798" selection-end-line="1798" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$USER_HOME$/.PyCharm2018.3/system/remote_sources/138626427/533225467/socketserver.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="9240">
@@ -444,23 +465,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="40">
           <caret line="2" column="16" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2018.3/system/remote_sources/138626427/1110149535/flask/app.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3063">
-          <caret line="1798" selection-start-line="1798" selection-end-line="1798" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
-          <caret line="179" column="9" lean-forward="true" selection-start-line="179" selection-start-column="9" selection-end-line="179" selection-end-column="9" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
