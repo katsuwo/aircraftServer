@@ -111,6 +111,41 @@ def setVTrim(val = None):
                "vtrim": vtrim}
     return JSONEncoder().encode(retDict)
 
+@app.route('/zoom/<val>', methods=['GET'])
+def setZoom(val = None):
+    print(val)
+    if val is None:
+        return "NONE"
+    zoom = {"Value": val}
+    mongo.db.zoom.drop()
+    mongo.db.zoom.insert(zoom)
+
+    retDict = {"result": "OK",
+               "statusCode": 200,
+               "zoom": zoom}
+    return JSONEncoder().encode(retDict)
+
+@app.route('/voiceCmd/<val>', methods=['GET'])
+def setVCmd(val = None):
+    print(val)
+    if val is None:
+        return "NONE"
+
+    if val == "true" or val == "True":
+        voiceCmd = {"Value": True}
+    elif val == "False" or val == "false":
+        voiceCmd = {"Value": False}
+    else:
+        return "Value must be True(true) / False(false)"
+
+    mongo.db.voiceCmd.drop()
+    mongo.db.voiceCmd.insert(voiceCmd)
+
+    retDict = {"result": "OK",
+               "statusCode": 200,
+               "voiceCmd": voiceCmd}
+    return JSONEncoder().encode(retDict)
+
 @app.route('/correction/<direction>/<val>', methods=['GET'])
 def setCorrection(direction = None, val = None):
     print(direction)
@@ -137,7 +172,7 @@ def setCorrection(direction = None, val = None):
                    "correction":correction}
         return JSONEncoder().encode(retDict)
     else:
-        return  ""
+        return ""
 #        query = {"update_time_stamp": {'$gte': float(lastupdatetime)}}
 
 
@@ -199,12 +234,26 @@ def getJson(aircrafts):
     else:
         vtrim = vtrims[0]
 
+    zooms = mongo.db.zoom.find()
+    if zooms.count() == 0:
+        zoom = 13
+    else:
+        zoom = zooms[0]
+
+    vcmds = mongo.db.voiceCmd.find()
+    if vcmds.count() == 0:
+        vcmd = True
+    else:
+        vcmd = vcmds[0]
+
     retDict = {'Items':acs,
                'Calibration': calib,
                'Correction': correction,
                'Interpolation': interpolation,
                'H_Trim': htrim,
                'V_Trim': vtrim,
+               'Zoom': zoom,
+               'VoiceCmd': vcmd,
                'ReadTime': readTime}
     return JSONEncoder().encode(retDict)
 
